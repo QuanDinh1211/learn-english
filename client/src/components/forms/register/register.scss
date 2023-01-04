@@ -1,0 +1,149 @@
+@import '../../../assets/style/mixin.scss';
+
+.register-form-container {
+    width: 46rem;
+    height: 58rem;
+    background-color: #fff;
+    position: absolute;
+    top: 10rem;
+    border-radius: 1.4rem;
+
+    .register-form-quit {
+        top: -3.6rem;
+        right: 0;
+        position: absolute;
+
+        i {
+            color: #fff;
+            font-size: 3rem;
+            cursor: pointer;
+        }
+    }
+    .register-form-avar {
+        width: 11rem;
+        height: 11rem;
+        background-color: #fff;
+        border-radius: 50%;
+        position: absolute;
+        top: -5.5rem;
+        left: 17.5rem;
+        overflow: hidden;
+        border: 4px solid #fff;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .register-form-header {
+        width: 100%;
+        height: 20%;
+        background-color: #f68b09;
+        border-top-left-radius: 1.4rem;
+        border-top-right-radius: 1.4rem;
+        @include boxCenter();
+        padding: 2.4rem 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        .register-form-header-name { 
+            
+            h2 {
+                color: #fff;
+                font-size: 2rem;
+            }
+        }
+    }
+
+    .register-form-body {
+        width: 100%;
+        height: 65%;
+        @include boxCenter();
+        .register-form-body-wrapper {
+            width: 90%;
+            height: 90%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            .register-form-body-title {
+                width: 80%;
+                height: 20%;
+                @include boxCenter();
+                h2 {
+                    color: #333;
+                    font-size: 2rem;
+                    text-align: center;
+                }
+            }
+
+            .register-body-form {
+                width: 100%;
+                height: 80%;
+                margin-top: 1rem; 
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                .register-form-control {
+                    width: 100%;
+                    height: 20%;
+                    .register-form-input {
+                        width: 100%;
+                        height: 100%;
+                        background: #f8f8f8;
+                        border-color: #eaeef5;
+                        border: 1px solid rgba(43,144,237,.15);
+                        border-radius: 3rem;
+                        @include boxCenter();
+                        input {
+                            width: 90%;
+                            height: 90%;
+                            border: none;
+                            outline: none;
+                            background-color: transparent;
+                            font-size:1.6rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .register-form-footer {
+        width: 100%;
+        height: 15%;
+        border-bottom-left-radius: 1.4rem;
+        border-bottom-right-radius: 1.4rem;
+        @include boxCenter();
+        .register-form-btn {
+            width: 30rem;
+            height: 6rem;
+            background-color: #f68b09;  
+            border-radius: 3rem;
+            @include boxCenter();
+            span {
+                color: #fff;
+                font-size: 2rem;
+                font-weight: 700;
+            }
+
+            &:hover {
+                cursor: pointer;
+                opacity: 0.9;
+            }
+
+            &.disabled {
+                background-color: #e5e5e5;
+                cursor: not-allowed;
+            }
+        }
+    }
+
+    @include responsive(phone) {
+        width: 42rem;
+        .register-form-avar {
+            left: 15.4rem;
+        }
+    }
+}

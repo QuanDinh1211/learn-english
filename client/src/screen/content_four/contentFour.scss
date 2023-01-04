@@ -1,0 +1,108 @@
+@import '../../assets/style/mixin.scss';
+
+.content-four-container {
+    width: 100%;
+    height: 56.5rem;
+    background-color: #2e3488;
+    @include boxCenter();
+    .content-four-wrapper {
+        width: 112rem;
+        height: 100%;
+        display: flex;
+        position: relative;
+        .content-four-first {
+            width: 30%;
+            height: 100%;
+            position: absolute;
+            top: -10%;
+            img {
+                width: 100%;
+            }
+        }
+
+        .content-four-last {
+            margin-left: auto;
+            width: 70%;
+            height: 100%;
+            @include boxCenter();
+            padding: 8rem;
+            flex-direction: column;
+
+            .content-four-last-text-one {
+                width: 100%;
+                height: 8rem;
+                span {
+                    font-size: 2.6rem;
+                    font-weight: 900;
+                    line-height: 3.4rem;
+                    color: #fff;
+                }
+            }
+
+            .content-four-last-text-tow {
+                width: 100%;
+                height: 16rem;
+                span {
+                    font-size: 2rem;
+                    line-height: 3.4rem;
+                    color: #fff;
+                }
+            }
+
+            .content-four-last-btn {
+                width: 100%;
+                height: 8rem;
+                @include boxCenter();
+
+                .content-four-last-btn-item {
+                    width: 28rem;
+                    height: 6rem;
+                    overflow: hidden;
+                }
+            }
+        }
+    }
+
+    @include responsive(tablet) {
+        .content-four-wrapper {
+            width: 90rem;
+            
+            .content-four-last {
+                justify-content: space-between;
+            }
+        }
+    }
+
+    @include responsive(tablet-min) {
+        .content-four-wrapper {
+            width: 80rem;
+            
+            .content-four-last {
+                justify-content: space-between;
+                padding: 6rem;
+ 
+            }
+        }
+    }
+
+    @include responsive(phone) {
+        height: 82rem;
+        .content-four-wrapper {
+            width: 80rem;
+            flex-direction: column;
+
+            .content-four-first {
+                width: 40%;
+                right: 25%;
+            }
+            
+            .content-four-last {
+                width: 90%;
+                justify-content: space-between;
+                padding: 4rem;
+                padding-top: 30rem;
+ 
+            }
+        }
+    }
+}

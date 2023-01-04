@@ -1,0 +1,210 @@
+@import '../../assets/style/mixin.scss';
+
+.content-six-container {
+    width: 100%;
+    height: 80rem;
+    padding: 5rem 0;
+    @include pd(10%);
+    background-color:#d6e3ff;
+    @include boxCenter();
+
+    .content-six-wrapper {
+        width: 76%;
+        height: 100%;
+        .content-six-header {
+            width: 100%;
+            height: 20%;
+            @include boxCenter();
+
+            h2 {
+                width: 80%;
+                line-height:3rem;
+                font-size: 2.4rem;
+                text-align: center;
+            }
+        }
+
+        .content-six-body {
+            width: 100%;
+            height: 60%;
+            .content-six-body-wrapper {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+
+                .content-six-body-list-item {
+                    width: 100%;
+                    height: 42%;
+                    display: flex;
+                    justify-content: space-between;
+                    .content-six-body-item {
+                        width: 32%;
+                        height: 100%;
+                        padding: 3rem;
+                        background-color: #fff;
+                        @include boxCenter();
+                        position: relative;
+                            .content-six-body-item-icon {
+                                width: 4.4rem;
+                                height: 4.4rem;
+                                position: absolute;
+                                top: -2.2rem;
+                                img {
+                                    width: 100%;
+                                }
+                            }
+    
+                            .content-six-body-item-text {
+                                width: 100%;
+                                height: 100%;
+                                @include boxCenter();
+                                flex-direction: column;
+
+                                span {
+                                    width: 100%;
+                                    height: 8rem;
+                                    text-align: center;
+                                    font-size: 1.2rem;
+                                    line-height: 1.6rem;
+                                }
+    
+                                .content-six-body-item-author {
+                                    width: 100%;
+                                    height: 4rem;
+                                    font-size: 1.4rem;
+                                }
+                            }
+                    }
+
+                }
+            }
+        }
+
+        .content-six-footer {
+            width: 100%;
+            height: 20%;
+            @include boxCenter();
+            
+            .content-six-footer-btn {
+                width: 28rem;
+                height: 6rem;
+                overflow: hidden;
+            }
+        }
+
+    }
+
+    @include responsive(min-destop) {
+        .content-six-wrapper {
+            width: 90%;
+        }
+    }
+
+    @include responsive(tablet) {
+        height: 900px;
+        @include pd(8%);
+        .content-six-wrapper {
+            width: 100%;
+
+            .content-six-header {
+                h2 {
+                    width: 100%;
+                    font-size: 3rem;
+                }
+            }
+
+            .content-six-body {
+                .content-six-body-wrapper {
+                    .content-six-body-list-item {
+                        .content-six-body-item {
+                            .content-six-body-item-text {
+                                .content-six-body-item-author {
+                                    @include boxCenter();
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include responsive(tablet-min) {
+        height: 900px;
+        @include pd(8%);
+        .content-six-wrapper {
+            width: 100%;
+
+            .content-six-header {
+                h2 {
+                    width: 100%;
+                    font-size: 3rem;
+                }
+            }
+
+            .content-six-body {
+                .content-six-body-wrapper {
+                    .content-six-body-list-item {
+                        .content-six-body-item {
+                            .content-six-body-item-text {
+                                .content-six-body-item-author {
+                                    @include boxCenter();
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include responsive(phone) {
+        height: 1600px;
+        @include pd(8%);
+        .content-six-wrapper {
+            width: 100%;
+
+            .content-six-header {
+                height: 10%;
+                h2 {
+                    width: 90%;
+                    font-size: 3rem;
+                }
+            }
+
+            .content-six-body {
+                height: 80%;
+                .content-six-body-wrapper { 
+                    padding: 0 2rem;
+                    .content-six-body-list-item {
+                        height: 46%;
+                        @include boxCenter();
+                        flex-direction: column;
+                        justify-content: space-between;
+                        .content-six-body-item {
+                            width: 100%;
+                            height: 30%;
+                            padding: 4rem 3rem;
+                            .content-six-body-item-text {
+                                span {
+                                    font-size: 1.6rem;
+                                    line-height: 1.8rem;
+                                }
+
+                                .content-six-body-item-author {
+                                    @include boxCenter();
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .content-six-footer {
+                height: 10%;
+            }
+        }
+    }
+}

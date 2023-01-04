@@ -1,0 +1,129 @@
+@import '../../assets/style/mixin.scss';
+
+.content-three-container {
+    width: 100%;
+    height: 33.8rem;
+    background-color: #fabba3;
+    padding: 0 10rem;
+    @include boxCenter();
+
+    .content-three-wrapper {
+        width: 70%;
+        height: 90%;
+        display: flex;
+
+        .content-three-first {
+            width: 50%;
+            height: 100%;
+            padding: 1rem 2rem;
+            @include boxCenter();
+            flex-direction: column;
+
+            .content-three-first-text-one {
+                width: 100%;
+                height: 8rem;
+                @include boxCenter();
+                
+                span {
+                    font-size: 2.6rem;
+                    font-weight: 900;
+                    line-height: 3.4rem;
+                }
+            }
+
+            .content-three-first-text-tow {
+                width: 100%;
+                height: 12rem;
+                @include boxCenter();
+                
+                span {
+                    font-size: 1.8rem;
+                    line-height: 3.4rem;
+                }
+            }
+        }
+
+        .content-three-last {
+            width: 50%;
+            height: 100%;
+            padding: 1rem 2rem;
+            @include boxCenter();
+            img {
+                width: 90%;
+            }
+        }
+
+        @include responsive(min-destop) {
+            width: 90%;
+        }
+
+    }
+    @include responsive(tablet) {
+        padding: 0 6rem;
+        .content-three-wrapper {
+        width: 100%;
+        }
+    }
+    @include responsive(tablet-min) {
+        padding: 0 4rem;
+        .content-three-wrapper {
+            width: 100%;
+
+            .content-three-first {
+                padding: 0;
+
+                .content-three-first-text-tow {
+                    span {
+                        font-size: 1.9rem;
+                        line-height: 3rem;
+                    }
+                }
+            }
+
+            .content-three-last {
+                @include boxCenter();
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    @include responsive(phone) {
+        height: 64rem;
+        padding: 0 4rem;
+        .content-three-wrapper {
+            width: 100%;
+            display: flex;
+            flex-direction: column-reverse;
+
+            .content-three-first {
+                width: 100%;
+                height: 50%;
+                padding: 0;
+
+                .content-three-first-text-one {
+                    span {
+                        text-align: center;
+                    }
+                }
+
+                .content-three-first-text-tow {
+                    span {
+                        font-size: 2.2rem;
+                        line-height: 3rem;
+                    }
+                }
+            }
+
+            .content-three-last {
+                width: 100%;
+                height: 50%;
+                @include boxCenter();
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

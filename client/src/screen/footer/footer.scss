@@ -1,0 +1,85 @@
+@import '../../assets/style/mixin.scss';
+
+.footer-container {
+    width: 100%;
+    height: 16rem;
+    @include boxCenter();
+    background-color: #2e3488;
+    .footer-wrapper {
+        width: 60%;
+        height: 80%;
+        @include boxCenter();
+        flex-direction: column; 
+
+        .footer-item-first {
+            width: 100%;
+            height: 8rem;
+            @include boxCenter();
+            
+            span {
+                font-size: 1.6rem;
+                text-align: center;
+                font-weight: 500;
+                color: #fff;
+                line-height: 2.4rem;
+            }
+        }
+
+        .footer-item-last {
+            width: 100%;
+            height: 4rem;
+            @include boxCenter();
+
+            .footer-item-last-icon {
+                width: 8rem;
+                height: 100%;
+                @include boxCenter();
+                a {
+                    i {
+                        color: #fff;
+                        font-size: 3rem;
+                    }
+
+                    &:hover {
+                        opacity: 0.9;
+                    }
+                }
+            }
+
+            span {
+                color: #fff;
+                font-size: 1.2rem;
+                text-align: center;
+                font-weight: 700;
+                line-height: 2.4rem;
+            }
+        }
+    }
+    
+    @include responsive(tablet) {
+        height: 18rem;
+        .footer-wrapper {
+            width: 80%;
+        }
+    }
+
+    @include responsive(tablet-min) {
+        height: 18rem;
+        .footer-wrapper {
+            width: 80%;
+        }
+    }
+
+    @include responsive(phone) {
+        height: 170px;
+        .footer-wrapper {
+            width: 96%;
+            
+            .footer-item-first {
+                span {
+                    font-size: 1.4rem;
+                }
+            }
+        }
+    }
+}

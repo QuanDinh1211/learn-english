@@ -1,0 +1,247 @@
+@import '../../assets/style/mixin.scss';
+
+.content-sevent-container {
+    width: 100%;
+    height: 90rem;
+    background-image: url('../../assets/img/backgroundFeed.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include boxCenter();
+    .content-sevent-wrapper {
+        width: 64%;
+        height: 90%;
+        .content-sevent-header {
+            width: 96%;
+            height: 10%;
+            @include boxCenter();
+            h2 {
+                width: 80%;
+                line-height:3rem;
+                font-size: 2.4rem;
+                text-align: center;
+            }
+        }
+
+        .content-sevent-body {
+            width: 100%;
+            height: 70%;
+            display: flex;
+            justify-content: flex-end;
+            .content-sevent-body-wrapper {
+                width: 70%;
+                height: 100%;
+                display: flex;
+                justify-content: space-around;
+                .content-sevent-body-list-item {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    padding:4rem 0;
+                    .content-sevent-body-item {
+                        img {
+                            width: 28rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        .content-sevent-footer {
+            width: 100%;
+            height: 20%;
+            display: flex;
+            justify-content: flex-end;
+
+            .content-sevent-footer-wrapper {
+                width: 70%;
+                height: 100%;
+                flex-direction: column;
+                @include boxCenter();
+                .content-sevent-footer-text {
+                    width: 90%;
+                    height: 60%;
+                    @include boxCenter();
+
+                    span {
+                        width: 90%;
+                        height: 100%;
+                        font-size: 2.4rem;
+                        font-weight:500;
+                        line-height: 3rem;
+                        text-align: center;
+                    }
+                }
+    
+                .contecontent-sevent-footer-btn {
+                    width: 90%;
+                    height: 40%;
+                    @include boxCenter();
+                    .contecontent-sevent-footer-btn-item {
+                        width: 28rem;
+                height: 6rem;
+                overflow: hidden;
+                    }
+                }
+            }
+        }
+    }
+
+    @include responsive(min-destop) {
+        .content-sevent-wrapper {
+            .content-sevent-header {
+                h2 {
+                    width: 94%;
+                }
+            }
+
+            .content-sevent-body {
+                .content-sevent-body-wrapper {
+                    .content-sevent-body-list-item {
+                        .content-sevent-body-item {
+                            img {
+                                width: 26rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include responsive(tablet) {
+        .content-sevent-wrapper {
+            width: 80%;
+
+            .content-sevent-header {
+                h2 {
+                    width: 100%;
+                    font-size: 3rem;
+                }
+            }
+
+            .content-sevent-body {
+                .content-sevent-body-wrapper {
+                    width: 76%;
+                }
+            }
+        }
+    }
+
+    @include responsive(tablet-min) {
+        .content-sevent-wrapper {
+            width: 80%;
+
+            .content-sevent-header {
+                h2 {
+                    width: 100%;
+                    font-size: 3rem;
+                }
+            }
+
+            .content-sevent-body {
+                .content-sevent-body-wrapper {
+                    width: 80%;
+
+                    .content-sevent-body-list-item {
+                        .content-sevent-body-item {
+                            img {
+                                width: 26rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include responsive(tablet-mini) {
+        .content-sevent-wrapper {
+            width: 80%;
+
+            .content-sevent-header {
+                h2 {
+                    width: 100%;
+                    font-size: 3rem;
+                    line-height: 4rem;
+                }
+            }
+
+            .content-sevent-body {
+                .content-sevent-body-wrapper {
+                    width: 100%;
+
+                    .content-sevent-body-list-item {
+                        .content-sevent-body-item {
+                            img {
+                                width: 26rem;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .content-sevent-footer {
+                  
+                .content-sevent-footer-wrapper {
+                    width: 100%;
+                    
+                }
+            }
+        }
+    }
+
+    @include responsive(phone) {
+        height: 1000px;
+        .content-sevent-wrapper {
+            width: 80%;
+            height: 100%;
+            .content-sevent-header {
+                height: 10%;
+                h2 {
+                    width: 100%;
+                    font-size: 3rem;
+                }
+            }
+
+            .content-sevent-body {
+                @include boxCenter();
+                .content-sevent-body-wrapper {
+                    width: 70%;
+                    display: flex;
+                    flex-direction: column;
+                    .content-sevent-body-list-item  {
+                        padding: 0;
+                        width: 100%;
+                        height: 46%;
+                        .content-sevent-body-item {
+                            width: 100%;
+                            img {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .content-sevent-footer {
+                height: 20%;
+                @include boxCenter();
+
+                .content-sevent-footer-wrapper {
+                    width: 100%;
+                    height: 100%;
+                    @include boxCenter();
+
+                    .content-sevent-footer-text {
+                        width: 100%;
+                        span {
+                            height: auto;
+                            font-size: 2rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
