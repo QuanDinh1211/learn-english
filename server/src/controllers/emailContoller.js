@@ -16,7 +16,7 @@ class EmailController {
 
     // send mail with defined transport object
     let info = await transporter.sendMail({
-      from: '"Learn English" <dinhvanquan1211@gmail.com>', // sender address
+      from: `"Learn English" <${process.env.EMAIL_APP}>`, // sender address
       to: emailClent, // list of receivers
       subject: "Khóa học tiếng anh miễn phí!", // Subject line
       html: `

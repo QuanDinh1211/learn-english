@@ -1,9 +1,9 @@
 require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
-const configViewEngine = require("./config/viewEngine")
-const initWebRoutes = require("./routes/web")
-const bodyParser = require("body-parser")
+const configViewEngine = require("./config/viewEngine");
+const initWebRoutes = require("./routes/web");
+const bodyParser = require("body-parser");
 
 let app = express();
 
@@ -18,9 +18,8 @@ configViewEngine(app);
 // init all web routes
 initWebRoutes(app);
 
-
 let port = process.env.PORT || 5000;
 
-app.listen(port, ()=>{
-   console.log(`App is running at the port ${port}`);
+app.listen(port, () => {
+  console.log(`App is running at the port ${port}`);
 });
