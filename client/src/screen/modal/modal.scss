@@ -1,5 +1,13 @@
 @import '../../assets/style/mixin.scss';
 
 .modal-container {
-    
+    .feedback-img-modal {
+        top: 30%;
+        position: fixed;
+        width: 46rem;
+
+        @include responsive(phone) {
+            width: 42rem;
+        }
+    }
 }

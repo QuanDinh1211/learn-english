@@ -7,6 +7,24 @@ export const RootContext = createContext();
 
 const RootContextProvider = ({ children }) => {
   const [showModal, setshowModal] = useState(false);
+  const [showFeedback, setShowFeedback] = useState({
+    show: false,
+    imgFeedback: "",
+  });
+
+  const handleShowFeedback = (img) => {
+    setShowFeedback({
+      show: true,
+      imgFeedback: img,
+    });
+  };
+
+  const handleCloseFeedback = () => {
+    setShowFeedback({
+      show: false,
+      imgFeedback: "",
+    });
+  };
 
   const handleSubmitFormRoot = async (formdata) => {
     const result = await axios.post(`${url}/createData`, formdata);
@@ -17,6 +35,9 @@ const RootContextProvider = ({ children }) => {
     showModal,
     setshowModal,
     handleSubmitFormRoot,
+    handleShowFeedback,
+    handleCloseFeedback,
+    showFeedback,
   };
 
   return (
