@@ -20,7 +20,7 @@ const ContentFive = () => {
           </span>
         </div>
         <div className="w-100 content-five-first-text-4">
-          <span>
+          <span className="text-bold">
             Cô Telesa tự tin sẽ là người bạn đồng hành phù hợp nhất cho những
             bạn người lớn muốn học Tiếng Anh giao tiếp. Cô Telesa còn lại
             Founder của trung tâm Tiếng Anh trực tuyến Telesa English với hơn
@@ -37,7 +37,7 @@ const ContentFive = () => {
           </span>
         </div>
         <div className="w-100 content-five-first-text-4 height-20">
-          <span>
+          <span className="text-bold">
             Khóa học online “Nói Tiếng Anh trong vòng 3 tháng” của cô là sản
             phẩm của hơn 5 kinh nghiệm việc giảng dạy và sự chứng kiến những khó
             khăn và điều thiếu sót mà môi trường học tập Tiếng Anh chưa đưa tới

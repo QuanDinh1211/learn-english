@@ -17,6 +17,7 @@ const RegisterForm = () => {
   };
 
   const handleSubmitForm = async (data) => {
+    setshowModal(false);
     const response = await handleSubmitFormRoot(data);
 
     if (response.success) {
@@ -25,8 +26,6 @@ const RegisterForm = () => {
       setValue("email", "");
       setValue("phone", "");
     }
-
-    setshowModal(false);
   };
 
   const [errorData, seterror] = useState({

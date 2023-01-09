@@ -6,6 +6,7 @@
     padding: 6rem 0;
     @include pd(10%);
     display: flex;
+    background-color: #EDEAE4;
 
     .content-five-first {
         width: 50%;
@@ -25,7 +26,8 @@
                 text-align: center;
                 font-size: 2rem;
                 font-family: "Futura PT", Sans-serif;
-                font-weight: 600;    
+                font-weight: 600;   
+                color: #345D59; 
 
             }
         }
@@ -37,6 +39,7 @@
             h2 {
                 line-height: 4rem;
                 font-size: 4rem;
+                color: #345D59; 
                 text-align: center;
             }
         }
@@ -49,6 +52,8 @@
             span {
                 line-height: 3rem;
                 font-size: 2.2rem;
+                color: #345D59; 
+                font-family: 'Livvic', sans-serif;
                 
             }
         }
@@ -60,6 +65,8 @@
             span {
                 line-height: 2.2rem;
                 font-size: 1.6rem;
+                color: #345D59; 
+                font-family: 'Livvic', sans-serif;
                 
             }
         }
