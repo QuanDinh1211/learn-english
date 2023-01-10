@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useContext } from "react";
 import { useForm } from "react-hook-form";
+import { toast } from "react-toastify";
 
 import "./register.scss";
 import { RootContext } from "../../../store/context/rootContext";
@@ -18,6 +19,8 @@ const RegisterForm = () => {
 
   const handleSubmitForm = async (data) => {
     setshowModal(false);
+    toast.success("Đăng ký thành công!");
+
     const response = await handleSubmitFormRoot(data);
 
     if (response.success) {
@@ -25,6 +28,7 @@ const RegisterForm = () => {
       setValue("lastName", "");
       setValue("email", "");
       setValue("phone", "");
+      toast.info("Thông tin khóa học đã được gửi qua Email của bạn.");
     }
   };
 
@@ -71,13 +75,15 @@ const RegisterForm = () => {
       </div>
       <div className="register-form-header">
         <div className="register-form-header-name">
-          <h2>TELESA</h2>
+          <h2 className="font-primary">TELESA</h2>
         </div>
       </div>
       <div className="register-form-body">
         <div className="register-form-body-wrapper">
           <div className="register-form-body-title">
-            <h2>GIỮ CHỖ CHO KHOÁ HỌC : “Nói Tiếng Anh trong vòng 3 tháng”</h2>
+            <h2 className="font-primary">
+              GIỮ CHỖ CHO KHOÁ HỌC : “Nói Tiếng Anh trong vòng 3 tháng”
+            </h2>
           </div>
           <form className="register-body-form">
             <div className="register-form-control">
@@ -137,7 +143,7 @@ const RegisterForm = () => {
             className={"register-form-btn "}
             onClick={handleSubmit(handleSubmitForm)}
           >
-            <span>ĐĂNG KÝ</span>
+            <span className="font-primary">ĐĂNG KÝ</span>
           </div>
         )}
       </div>

@@ -11,7 +11,7 @@ const ContentFive = () => {
           <span className="title-background">CÔ TELESA LÀ AI:</span>
         </div>
         <div className="w-100 content-five-first-text-2">
-          <h2>TELESA</h2>
+          <h2 className="font-primary">TELESA</h2>
         </div>
         <div className="w-100 content-five-first-text-3">
           <span>

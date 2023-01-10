@@ -1,4 +1,6 @@
 import { useContext } from "react";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import "./assets/style/global.scss";
 import "./assets/style/reset.css";
@@ -19,6 +21,20 @@ function App() {
         <Content />
         {showModal && <Modal />}
         {show && <ModalShowFeedBack />}
+        <ToastContainer
+          position="top-right"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="light"
+        />
+        {/* Same as */}
+        <ToastContainer />
       </div>
     </div>
   );

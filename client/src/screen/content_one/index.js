@@ -13,21 +13,23 @@ const ContentOne = () => {
       </div>
       <div className="content-one-last">
         <div className="w-100 content-one-last-text-1">
-          <span className="title-background">
+          <span className="title-background font-primary">
             KHÓA HỌC NGẮN MIỄN PHÍ “ BÍ QUYẾT ĐỂ NÓI TIẾNG ANH LƯU LOÁT "
           </span>
         </div>
         <div className="w-100 content-one-last-text-2">
-          <h1>
+          <h1 className="font-primary">
             VIDEO NÀY CÓ THỂ THAY ĐỔI HOÀN TOÀN CÁCH HỌC TIẾNG ANH VÀ MINDSET
             CỦA BẠN
           </h1>
         </div>
         <div className="w-100 content-one-last-text-3">
-          <span>BẠN ĐÃ SẴN SÀNG ĐỂ NÓI TIẾNG ANH LƯU LOÁT ?</span>
+          <span className="font-primary">
+            BẠN ĐÃ SẴN SÀNG ĐỂ NÓI TIẾNG ANH LƯU LOÁT ?
+          </span>
         </div>
         <div className="w-100 content-one-last-text-4">
-          <span>
+          <span className="font-primary">
             (Kể cả khi bạn bắt đầu từ con số 0- không căn bản- không ngữ pháp-
             không có kế hoạch học tập)
           </span>

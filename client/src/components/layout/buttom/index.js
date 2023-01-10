@@ -11,7 +11,7 @@ const Buttom = ({ value }) => {
   };
   return (
     <div className="btn-container" onClick={handleClickBtn}>
-      <span>{value}</span>
+      <span className="font-primary">{value}</span>
     </div>
   );
 };

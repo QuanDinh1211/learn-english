@@ -16,7 +16,7 @@ const ContentSevent = () => {
     <div className="content-sevent-container">
       <div className="content-sevent-wrapper">
         <div className="content-sevent-header">
-          <h2>HỌC VIÊN ĐÃ ĐẠT KẾT QUẢ NHƯ THẾ NÀO?</h2>
+          <h2 className="font-primary">HỌC VIÊN ĐÃ ĐẠT KẾT QUẢ NHƯ THẾ NÀO?</h2>
         </div>
         <div className="content-sevent-body">
           <div className="content-sevent-body-wrapper">
@@ -93,7 +93,7 @@ const ContentSevent = () => {
         <div className="content-sevent-footer">
           <div className="content-sevent-footer-wrapper">
             <div className="content-sevent-footer-text">
-              <span>
+              <span className="font-primary">
                 GIỮ CHỖ CHO KHOÁ HỌC : “Nói Tiếng Anh trong vòng 3 tháng”
               </span>
             </div>

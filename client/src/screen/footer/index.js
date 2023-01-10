@@ -7,7 +7,9 @@ const Footer = () => {
     <div className="footer-container">
       <div className="footer-wrapper">
         <div className="footer-item-first">
-          <span>NHỮNG KÊNH MÀ BẠN CÓ THỂ THEO DÕI VÀ LIÊN LẠC CÔ TELESA:</span>
+          <span className="font-primary">
+            NHỮNG KÊNH MÀ BẠN CÓ THỂ THEO DÕI VÀ LIÊN LẠC CÔ TELESA:
+          </span>
         </div>
         <div className="footer-item-last">
           <div className="footer-item-last-icon">

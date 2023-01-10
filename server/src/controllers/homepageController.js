@@ -1,5 +1,7 @@
 const moment = require("moment");
+require("dotenv").config();
 const { GoogleSpreadsheet } = require("google-spreadsheet");
+
 const EmailController = require("./emailContoller");
 
 const { senEmail } = EmailController;

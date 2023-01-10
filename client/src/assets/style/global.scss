@@ -2,9 +2,9 @@
 
 html {
     font-size: 62.5%;
-    line-height: 1.6rem;
+    line-height: 1.6rem ;
     box-sizing: border-box;
-    font-family: system-ui; 
+    font-family: 'Livvic', sans-serif;
 
     @include responsive(tablet) {
         font-size: 56.25%;
@@ -95,4 +95,9 @@ a {
 
 .text-decoration {
     text-decoration: underline;
+}
+
+.font-primary {
+    font-family: 'Livvic', sans-serif;
+    color: #345D59;
 }
