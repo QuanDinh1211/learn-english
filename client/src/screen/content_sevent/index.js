@@ -16,7 +16,7 @@ const ContentSevent = () => {
     <div className="content-sevent-container">
       <div className="content-sevent-wrapper">
         <div className="content-sevent-header">
-          <h2 className="font-primary">HỌC VIÊN ĐÃ ĐẠT KẾT QUẢ NHƯ THẾ NÀO?</h2>
+          <h2 className="font-primary">Học viên đã đạt kết quả như thế nào?</h2>
         </div>
         <div className="content-sevent-body">
           <div className="content-sevent-body-wrapper">
@@ -99,7 +99,7 @@ const ContentSevent = () => {
             </div>
             <div className="contecontent-sevent-footer-btn">
               <div className="contecontent-sevent-footer-btn-item">
-                <Buttom value="THAM GIA LỚP HỌC NGAY!" />
+                <Buttom value="Tham gia lớp học ngay!" />
               </div>
             </div>
           </div>

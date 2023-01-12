@@ -8,12 +8,14 @@ import ContentTow from "./content_tow";
 import ContentFive from "./content_five";
 // import ContentSix from "./content_six";
 import ContentSevent from "./content_sevent";
+import ContentVideo from "./content_video";
 import Footer from "./footer";
 
 const Content = () => {
   return (
     <div className="content-container">
       <ContentOne />
+      <ContentVideo />
       <ContentTow />
       {/* <ContentThree />
       <ContenFour /> */}

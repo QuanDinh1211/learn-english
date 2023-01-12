@@ -14,7 +14,7 @@ const ContentTow = () => {
             </span>
           </div> */}
           <div className="content-tow-header-center">
-            <span className="font-primary">OUTLINE CỦA KHÓA HỌC NGẮN</span>
+            <span className="font-primary">Outline của khóa học ngắn</span>
           </div>
           {/* <div className="content-tow-header-des">
             <span>
@@ -31,11 +31,11 @@ const ContentTow = () => {
               </div>
               <div className="content-tow-body-item-text">
                 <div className="content-tow-body-item-text-red">
-                  <span className="font-primary">PHẦN 1:</span>
+                  <span className="font-primary">Phần 1:</span>
                 </div>
                 <div className="content-tow-body-item-text-black">
                   <span className="font-primary">
-                    CẦN GÌ ĐỂ NÓI TIẾNG ANH LƯU LOÁT?
+                    Cần gì để nói tiếng anh lưu loát ?
                     {/* The 4 Components to a{" "} */}
                     {/* <span className="text-blue">Home-Run Niche</span> So People
                     Will Finally{" "}
@@ -51,12 +51,12 @@ const ContentTow = () => {
               </div>
               <div className="content-tow-body-item-text">
                 <div className="content-tow-body-item-text-red">
-                  <span className="font-primary">PHẦN 2:</span>
+                  <span className="font-primary">Phần 2:</span>
                 </div>
                 <div className="content-tow-body-item-text-black">
                   <span className="font-primary">
-                    CÔNG THỨC ĐỂ LÊN KẾ HOẠCH HỌC TẬP TRONG NGÀY HIỆU QUẢ MÀ
-                    KHÔNG TỐN NHIỀU THỜI GIAN.
+                    Công thức để lên kế hoạt học tập trong ngày hiệu quả mà
+                    không tốn nhiều thời gian.
                     {/* The 4 Types of Content to Create To{" "}
                     <span className="text-blue">Attract Followers</span> Who
                     Will Actually <span className="text-decoration">PAY</span>{" "}
@@ -71,12 +71,12 @@ const ContentTow = () => {
               </div>
               <div className="content-tow-body-item-text">
                 <div className="content-tow-body-item-text-red">
-                  <span className="font-primary">PHẦN 3:</span>
+                  <span className="font-primary">Phần 3:</span>
                 </div>
                 <div className="content-tow-body-item-text-black">
                   <span className="font-primary">
-                    NHỮNG NGUỒN HỌC VÀ GỢI Ý MÀ BẠN CÓ THỂ SỬ DỤNG LÀM TÀI LIỆU
-                    HỌC
+                    Những nguồn học và gợi ý mà bạn có thể sử dụng làm tài liệu
+                    học
                     {/* The 3 Key Elements That{" "}
                     <span className="text-blue">Supercharge Conversions</span>{" "}
                     And Help Creators Start{" "}
@@ -92,11 +92,11 @@ const ContentTow = () => {
               </div>
               <div className="content-tow-body-item-text">
                 <div className="content-tow-body-item-text-red">
-                  <span className="font-primary">PHẦN 4:</span>
+                  <span className="font-primary">Phần 4:</span>
                 </div>
                 <div className="content-tow-body-item-text-black">
                   <span className="font-primary">
-                    Q&A: HỎI ĐÁP CÙNG CÔ TELESA
+                    Q&A: Hỏi đáp cùng cô TELESA
                     {/* The 3 Key Elements That{" "}
                     <span className="text-blue">Supercharge Conversions</span>{" "}
                     And Help Creators Start{" "}
@@ -110,7 +110,7 @@ const ContentTow = () => {
         </div>
         <div className="content-tow-container-footer">
           <div className="content-tow-footer-btn">
-            <Buttom value="THAM GIA LỚP HỌC NGAY!" />
+            <Buttom value="Tham gia lớp học ngay!" />
           </div>
         </div>
       </div>

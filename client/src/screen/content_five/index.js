@@ -48,13 +48,13 @@ const ContentFive = () => {
         </div>
         <div className="w-100 content-five-first-btn">
           <div className="content-five-first-btn-item">
-            <Buttom value="THAM GIA LỚP HỌC NGAY!" />
+            <Buttom value="Tham gia khóa học ngay!" />
           </div>
         </div>
       </div>
       <div className="content-five-last">
         <div className="content-five-last-img">
-          <img src={require("../../assets/img/2.png")} alt="contenone" />
+          <img src={require("../../assets/img/4.png")} alt="contenone" />
         </div>
       </div>
     </div>
