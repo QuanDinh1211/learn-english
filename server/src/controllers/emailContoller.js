@@ -18,19 +18,21 @@ class EmailController {
     let info = await transporter.sendMail({
       from: `"Learn English" <${process.env.EMAIL_APP}>`, // sender address
       to: emailClent, // list of receivers
-      subject: "Khóa học tiếng anh miễn phí!", // Subject line
+      subject: "Nói tiếng anh trong vòng 3 tháng cùng TELESA!", // Subject line
       html: `
       <!DOCTYPE html>
         <html>
         <body>
-        <b>Xin chào ${name}</b>
-        <p>THÀNH THẠO CHÀO HỎI cách TỰ NHIÊN nhất  bằng Tiếng Anh CHO NGƯỜI LẠ VÀ NGƯỜI QUEN</p>
+        <b>Xin chào ${name} !</b>
+
+        <h4>Bạn đã đăng ký tham gia học thử thành công!</h4>
+
+        <h4>Dưới đây là video học thử của bạn.</h4>
+        <a href="https://www.youtube.com/watch?v=zU1rvVlRr1w">https://www.youtube.com/watch?v=zU1rvVlRr1w</a>
         <div>
-          <a href="https://www.youtube.com/watch?v=Xg-Jhgp3bJE">Click</a>
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/Xg-Jhgp3bJE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/zU1rvVlRr1w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
-
-
+        
         </body>
         </html>
       `,
