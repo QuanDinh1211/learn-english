@@ -9,6 +9,7 @@ import ContentFive from "./content_five";
 // import ContentSix from "./content_six";
 import ContentSevent from "./content_sevent";
 import ContentVideo from "./content_video";
+import FeedBack from "./feedback";
 import Footer from "./footer";
 
 const Content = () => {
@@ -21,6 +22,7 @@ const Content = () => {
       <ContenFour /> */}
       <ContentFive />
       {/* <ContentSix /> */}
+      <FeedBack />
       <ContentSevent />
       <Footer />
     </div>

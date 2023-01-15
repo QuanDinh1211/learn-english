@@ -1,0 +1,19 @@
+@import '../../assets/style/mixin.scss';
+
+.content-feedback-first-slide-item {
+    width: 8rem;
+    height: 8rem;
+    background-color: #fff;
+    border-radius:50% ;
+    overflow: hidden;
+    @include boxCenter();
+    .content-feedback--slide-item-img {
+        width: 100%;
+        height: 100%;
+        @include boxCenter();
+        background-color: #fff;
+        img {
+            width: 100%;
+        }
+    }
+}
