@@ -54,7 +54,7 @@ const ContentFive = () => {
       </div>
       <div className="content-five-last">
         <div className="content-five-last-img">
-          <img src={require("../../assets/img/4.png")} alt="contenone" />
+          <img src={require("../../assets/img/img1.png")} alt="contenone" />
         </div>
       </div>
     </div>
