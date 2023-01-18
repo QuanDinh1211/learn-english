@@ -7,7 +7,7 @@ import ContentTow from "./content_tow";
 // import ContenFour from "./content_four";
 import ContentFive from "./content_five";
 // import ContentSix from "./content_six";
-import ContentSevent from "./content_sevent";
+// import ContentSevent from "./content_sevent";
 import ContentVideo from "./content_video";
 import FeedBack from "./feedback";
 import Footer from "./footer";
@@ -23,7 +23,7 @@ const Content = () => {
       <ContentFive />
       {/* <ContentSix /> */}
       <FeedBack />
-      <ContentSevent />
+      {/* <ContentSevent /> */}
       <Footer />
     </div>
   );

@@ -35,7 +35,7 @@ const ContentTow = () => {
                 </div>
                 <div className="content-tow-body-item-text-black">
                   <span className="font-primary">
-                    Cần gì để nói tiếng anh lưu loát ?
+                    Cần làm gì để nói tiếng anh lưu loát ?
                     {/* The 4 Components to a{" "} */}
                     {/* <span className="text-blue">Home-Run Niche</span> So People
                     Will Finally{" "}
@@ -55,7 +55,7 @@ const ContentTow = () => {
                 </div>
                 <div className="content-tow-body-item-text-black">
                   <span className="font-primary">
-                    Công thức để lên kế hoạt học tập trong ngày hiệu quả mà
+                    Công thức để lên kế hoạch học tập trong ngày hiệu quả mà
                     không tốn nhiều thời gian.
                     {/* The 4 Types of Content to Create To{" "}
                     <span className="text-blue">Attract Followers</span> Who
@@ -75,8 +75,8 @@ const ContentTow = () => {
                 </div>
                 <div className="content-tow-body-item-text-black">
                   <span className="font-primary">
-                    Những nguồn học và gợi ý mà bạn có thể sử dụng làm tài liệu
-                    học
+                    Những nguồn học và gợi ý mà bạn có thể sử dụng để làm tài
+                    liệu học
                     {/* The 3 Key Elements That{" "}
                     <span className="text-blue">Supercharge Conversions</span>{" "}
                     And Help Creators Start{" "}
@@ -96,7 +96,7 @@ const ContentTow = () => {
                 </div>
                 <div className="content-tow-body-item-text-black">
                   <span className="font-primary">
-                    Q&A: Hỏi đáp cùng cô TELESA
+                    Q&A: Hỏi đáp cùng cô Telesa
                     {/* The 3 Key Elements That{" "}
                     <span className="text-blue">Supercharge Conversions</span>{" "}
                     And Help Creators Start{" "}

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
 
 import "./feedbackStyle.scss";
@@ -31,38 +31,39 @@ function SamplePrevArrow(props) {
 }
 
 const FeedBack = () => {
-  const [dataRender, setdataRender] = useState(2);
+  const [chang, setchang] = useState(0);
+  const [dataRender, setdataRender] = useState(0);
   const dataFeedback = [
     {
-      id: 1,
+      id: 0,
       img: "slide3.jpg",
       name: "Linda Nguyen",
       description: "Đang sinh sống và làm việc ở nước ngoài",
       text: "Giáo viên nhiệt tình, nhiều tâm huyết . với tôi là người mù tiếng anh và luôn xếp nhất lớp từ dưới lên bây giờ tôi có thể tự tin nói chuyện với boyfriend . cảm ơn ms rất nhiều với sự chú đáo , nhiệt tình,và kiên nhẫn dành cho tôi.thank you very much",
     },
     {
-      id: 2,
+      id: 1,
       img: "slide4.jpg",
       name: "Thanh Nguyên",
       description: "Nhân viên bán hàng",
       text: "Cô giáo vui lắm lắm luôn í, rất nhiệt tình. Mình tự nhận mình là một đứa không có năng khiếu học tiếng anh ấy, học chậm, hay quên, đọc sai tè le vậy mà từ khi học cô, cô tận tình chỉ cho từng chút, cô rất kiên nhẫn với mình, hay động viên và gọi điện chỉ riêng cho mình những lỗi sai hay củng cố lại kiến thức mà trên lớp mình theo không kịp. ",
     },
     {
-      id: 3,
+      id: 2,
       img: "slide5.jpg",
       name: "Quin Huynh",
       description: "Đại lý du lịch",
       text: "Telesa is my English teacher, her class always is full of energy, she usually asks us to present the topic to correct our Pronunciation, Grammar and gives us the Feedback each 10 sections.That action helps us improve our weaknesses and become more confident to speak.",
     },
     {
-      id: 4,
+      id: 3,
       img: "slide1.jpg",
       name: "Nông Thị Hằng",
       description: "Giáo viên",
       text: "Nhờ có khoá học này mà tôi cải thiện đáng kể về phát âm của mình. Cô giáo rất nhiệt tình chu đáo, hướng dẫn tỉ mỉ cách phát âm. Thank you very much “Telesa English Center” ?",
     },
     {
-      id: 5,
+      id: 4,
       img: "slide2.jpg",
       name: "Trần Phú",
       description: "Kinh doanh xuất nhập khẩu hàng hóa",
@@ -71,12 +72,18 @@ const FeedBack = () => {
   ];
 
   const handleChangeSlide = () => {
-    if (dataRender === 5) {
-      setdataRender(1);
-    } else {
-      setdataRender(dataRender + 1);
-    }
+    setchang(chang + 1);
   };
+
+  const elementactive = document.getElementsByClassName(
+    "slick-slide slick-active slick-center slick-current"
+  );
+  useEffect(() => {
+    if (elementactive) {
+      let preactiveItem = elementactive[0].getAttribute("data-index");
+      setdataRender(preactiveItem);
+    }
+  });
 
   const settings = {
     className: "center",
@@ -87,6 +94,7 @@ const FeedBack = () => {
     autoplay: true,
     autoplaySpeed: 3000,
     pauseOnHover: true,
+    pauseOnFocus: true,
     beforeChange: handleChangeSlide,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
@@ -100,10 +108,12 @@ const FeedBack = () => {
     autoplay: true,
     autoplaySpeed: 3000,
     pauseOnHover: true,
+    pauseOnFocus: true,
     beforeChange: handleChangeSlide,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
   };
+
   return (
     <div className="content-feedback-container">
       <div className="content-feedback-wrapper">
@@ -132,7 +142,7 @@ const FeedBack = () => {
               <div className="content-feedback-body-last-header-name">
                 <span className="font-primary"></span>
                 {dataFeedback.map((feedback, index) => {
-                  if (feedback.id === dataRender) {
+                  if (Number(feedback.id) === Number(dataRender)) {
                     return (
                       <span className="font-primary" key={index}>
                         {feedback.name}
@@ -144,7 +154,7 @@ const FeedBack = () => {
               </div>
               <div className="content-feedback-body-last-header-des">
                 {dataFeedback.map((feedback, index) => {
-                  if (feedback.id === dataRender) {
+                  if (Number(feedback.id) === Number(dataRender)) {
                     return (
                       <span className="font-primary" key={index}>
                         {feedback.description}
@@ -158,7 +168,7 @@ const FeedBack = () => {
             <div className="content-feedback-body-last-body">
               <div className="content-feedback-body-last-body-text">
                 {dataFeedback.map((feedback, index) => {
-                  if (feedback.id === dataRender) {
+                  if (Number(feedback.id) === Number(dataRender)) {
                     return (
                       <span key={index} className="font-primary">
                         {feedback.text}

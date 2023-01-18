@@ -8,7 +8,7 @@ const ContentVideo = () => {
       <div className="content-video-wrapper">
         <div className="content-video-header">
           <h2 className="font-primary">
-            Đăng ký khóa học: "Nói tiếng anh trong vòng 3 tháng cùng TELESA"
+            Nhận ngay khóa học MIỄN PHÍ "Làm gì để nói Tiếng anh lưu loát ?"
           </h2>
         </div>
         <div className="content-video-body">
