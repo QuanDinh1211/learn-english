@@ -8,7 +8,7 @@ const ContentOne = () => {
     <div className="content-one-container">
       <div className="content-one-first">
         <div className="content-one-first-img">
-          <img src={require("../../assets/img/4.png")} alt="contenone" />
+          <img src={require("../../assets/img/1.png")} alt="contenone" />
         </div>
       </div>
       <div className="content-one-last">
