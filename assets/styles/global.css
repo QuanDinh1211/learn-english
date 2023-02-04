@@ -1,0 +1,119 @@
+html {
+  font-size: 62.5%;
+  line-height: 1.6rem;
+  box-sizing: border-box;
+  font-family: "Livvic", sans-serif;
+}
+@media (min-width: 900px) and (max-width: 1200px) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media (min-width: 600px) and (max-width: 900px) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media (max-width: 600px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+.app-wrapper {
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.mt-30 {
+  margin-top: 3rem;
+}
+
+.mt-10 {
+  margin-top: 1rem;
+}
+
+.pdt-90 {
+  padding-top: 9rem;
+}
+
+.pdl-30 {
+  padding-left: 3rem;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.height-20 {
+  height: 20rem;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+.text-bold {
+  font-weight: 700;
+}
+
+.relative {
+  position: relative;
+}
+
+.modal-container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(2, 2, 2, 0.639);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.error-message {
+  color: #bf1650;
+  font-size: 1.4rem;
+}
+
+.title-background {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 50%, #FDD944 50%, #FDD944 100%) !important;
+}
+
+.text-blue {
+  font-weight: 700;
+  color: #3b73b9;
+}
+
+.text-decoration {
+  text-decoration: underline;
+}
+
+.font-primary {
+  font-family: "Livvic", sans-serif;
+  color: #345D59;
+}
+
+.display-none {
+  display: none;
+}
+
+.display-block {
+  display: flex;
+}
+
+.form-message {
+  display: none;
+  font-size: 14px;
+  color: #ee4d2d;
+}
+
+.error {
+  border-color: #ee4d2d;
+}/*# sourceMappingURL=global.css.map */

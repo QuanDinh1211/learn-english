@@ -1,0 +1,316 @@
+@import './mixin.scss';
+
+.content-five-container {
+    width: 100%;
+    height: 76rem;
+    padding: 6rem 0;
+    @include pd(10%);
+    display: flex;
+    background-color: #F8CAAD;
+
+    .content-five-first {
+        width: 50%;
+        height: 100%;
+        padding: 4rem; 
+
+
+        .content-five-first-text-1 {
+            height: 4rem;
+            @include boxCenter();
+            // margin-bottom: 1.6rem;
+            justify-content: flex-start;
+            span {
+                width: 40%;
+                line-height: 100%;
+                padding: 0 0.4rem;
+                text-align: center;
+                font-size: 2rem;
+                font-family: "Futura PT", Sans-serif;
+                font-weight: 600;   
+                color: #345D59; 
+
+            }
+        }
+
+        .content-five-first-text-2 {
+            height: 6rem;
+            @include boxCenter();
+            justify-content: flex-start;
+            h2 {
+                line-height: 4rem;
+                font-size: 4rem;
+                color: #345D59; 
+                text-align: center;
+            }
+        }
+
+        .content-five-first-text-3 {
+            height: 8rem;
+            margin-top: 0.6rem;
+            @include boxCenter();
+
+            span {
+                line-height: 3rem;
+                font-size: 2.2rem;
+                color: #345D59; 
+                font-family: 'Livvic', sans-serif;
+                
+            }
+        }
+        .content-five-first-text-4 {
+            height: 10rem;
+            margin-top: 1rem;
+            @include boxCenter();
+
+            span {
+                line-height: 2.2rem;
+                font-size: 1.6rem;
+                color: #345D59; 
+                font-family: 'Livvic', sans-serif;
+                
+            }
+        }
+
+        .content-five-first-btn {
+            height: 10rem;
+            @include boxCenter();
+            .content-five-first-btn-item {
+                width: 28rem;
+                height: 6rem;
+                overflow: hidden;
+            }
+        } 
+
+    }
+    
+    .content-five-last {
+        width: 50%;
+        height: 100%;
+        @include boxCenter();
+        .content-five-last-img {
+            width: 100%;
+            height: 90%;
+            @include boxCenter();
+
+            img {
+                width: 80%;
+                // box-shadow: 0px 0px 87px 0px rgb(238 180 180);
+            }
+        }
+    }
+
+    @include responsive(min-destop) {
+        padding: 2rem;
+        .content-five-first {
+            padding: 4rem 2rem;
+            .content-five-first-text-1 {
+
+                span {
+                    width: 40%;
+                }
+            }
+
+            .content-five-first-text-2 {
+                h2 {
+                    font-size: 5rem;
+                }
+            }
+
+            .content-five-first-text-3 {
+                span {
+                    font-size: 2.4rem;
+                }
+            }
+        }
+    }
+
+    @include responsive(tablet) {
+        height: 1700px;
+        flex-direction: column-reverse;
+        padding: 6rem 4rem;
+
+        .content-five-first {
+            width: 100%;
+            height: 46%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            .content-five-first-text-1 {
+                height: 4rem;
+                span {
+                    font-size: 2.6rem;
+                }
+            }
+
+            .content-five-first-text-2 {
+                h2 {
+                    font-size: 6rem;
+                }
+            }
+
+            .content-five-first-text-3 {
+                span {
+                    font-size: 3rem;
+                    line-height: 4rem;
+                }
+            }
+
+            .content-five-first-text-4 {
+                span {
+                    font-size: 2rem;
+                    line-height: 2.6rem;
+                }
+            }
+        }
+        .content-five-last {
+            width: 100%;
+            height: 54%;
+
+            .content-five-last-img {
+                img {
+                    width: 60%;
+                }
+            }
+        }
+    }
+
+    @include responsive(tablet-min) {
+        height: 1700px;
+        flex-direction: column-reverse;
+        padding: 6rem 4rem;
+
+        .content-five-first {
+            width: 100%;
+            height: 46%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            .content-five-first-text-1 {
+                height: 4rem;
+                span {
+                    font-size: 2.6rem;
+                }
+            }
+
+            .content-five-first-text-2 {
+                h2 {
+                    font-size: 6rem;
+                }
+            }
+
+            .content-five-first-text-3 {
+                span {
+                    font-size: 3rem;
+                    line-height: 4rem;
+                }
+            }
+
+            .content-five-first-text-4 {
+                span {
+                    font-size: 2rem;
+                    line-height: 2.6rem;
+                }
+            }
+        }
+        .content-five-last {
+            width: 100%;
+            height: 54%;
+        }
+    }
+
+    @include responsive(tablet-mini) {
+        height: 1700px;
+        flex-direction: column-reverse;
+        padding: 6rem 4rem;
+
+        .content-five-first {
+            width: 100%;
+            height: 60%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            .content-five-first-text-1 {
+                height: 4rem;
+                span {
+                    width: 50%;
+                    font-size: 2.6rem;
+                }
+            }
+
+            .content-five-first-text-2 {
+                h2 {
+                    font-size: 6rem;
+                }
+            }
+
+            .content-five-first-text-3 {
+                span {
+                    font-size: 2.8rem;
+                    line-height: 4rem;
+                }
+            }
+
+            .content-five-first-text-4 {
+                span {
+                    font-size: 1.8rem;
+                    line-height: 2.6rem;
+                }
+            }
+        }
+        .content-five-last {
+            width: 100%;
+            height: 40%;
+        }
+    }
+
+    @include responsive(phone) {
+        height: 1500px;
+        flex-direction: column-reverse;
+        padding: 0 4rem;
+
+        .content-five-first {
+            padding: 1rem;
+            width: 100%;
+            height: 66%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            .content-five-first-text-1 {
+                height: 4rem;
+                @include boxCenter();
+                span {
+                    width: 70%;
+                    font-size: 2.4rem;
+                }
+            }
+
+            .content-five-first-text-2 {
+                h2 {
+                    font-size: 5rem;
+                }
+            }
+
+            .content-five-first-text-3 {
+                height: 15rem;
+                span {
+                    font-size: 2.2rem;
+                    line-height: 4rem;
+                    text-align: center;
+                }
+            }
+
+            .content-five-first-text-4 {
+                height: 15rem;
+                span {
+                    font-size: 1.8rem;
+                    line-height: 2.6rem;
+                }
+            }
+        }
+        .content-five-last {
+            width: 100%;
+            height: 34%;
+        }
+    }
+    
+}

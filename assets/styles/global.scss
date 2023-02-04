@@ -1,0 +1,120 @@
+@import 'mixin.scss';
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem ;
+    box-sizing: border-box;
+    font-family: 'Livvic', sans-serif;
+
+    @include responsive(tablet) {
+        font-size: 56.25%;
+    }
+
+    @include responsive(tablet-min) {
+        font-size: 56.25%;
+    }
+    
+    @include responsive(phone) {
+        font-size: 50%;
+    }
+
+    // @include responsive(big-destop) {
+    //     font-size: 75%;
+    // }
+}
+
+.app-wrapper {
+    width: 100vw;
+    min-height: 100vh;
+    // @include boxCenter();;
+}
+.mt-30 {
+    margin-top: 3rem;
+}
+
+.mt-10 {
+    margin-top: 1rem;
+}
+
+.pdt-90 {
+    padding-top: 9rem;
+}
+
+.pdl-30 {
+    padding-left: 3rem;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.height-20 {
+    height: 20rem;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+.text-bold {
+    font-weight: 700;
+}
+
+.relative {
+    position: relative;
+}
+
+.modal-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(2, 2, 2, 0.639);
+    @include boxCenter();
+}
+
+.error-message {
+    color: #bf1650;
+    font-size: 1.4rem;
+}
+
+.title-background {
+    background: linear-gradient(to bottom, #ffffff00 0%, #ffffff00 50%,#FDD944 50%,#FDD944 100%) !important;
+}
+
+.text-blue {
+    font-weight: 700;
+    color: #3b73b9;
+    
+}
+
+.text-decoration {
+    text-decoration: underline;
+}
+
+.font-primary {
+    font-family: 'Livvic', sans-serif; 
+    color: #345D59;
+}
+
+.display-none {
+    display: none;
+}
+
+.display-block {
+    display: flex;
+}
+
+.form-message {
+    display: none;
+    font-size:14px;
+    color: #ee4d2d;
+}
+.error {
+    border-color: #ee4d2d;
+}

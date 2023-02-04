@@ -1,0 +1,404 @@
+@import './mixin.scss';
+
+.content-one-container {
+    width: 100%;
+    height: 76rem;
+    padding: 6rem 0;
+    padding-bottom: 3rem;
+    @include pd(5%);
+    display: flex;
+    
+    .content-one-first {
+        width: 50%;
+        height: 100%;
+        @include boxCenter();
+        .content-one-first-img {
+            width: 90%;
+            height: 90%;
+            @include boxCenter(); 
+
+            img {
+                width: 80%;
+                background-color: #e1e1e6;
+                // box-shadow: 0px 0px 87px 0px rgb(0 0 0 / 25%);
+            }
+        }
+    }
+    .content-one-last {
+        width: 50%;
+        height: 100%;
+        padding: 4rem 2rem; 
+
+
+        .content-one-last-text-1 {
+            height: 6rem;
+            @include boxCenter();
+            // margin-bottom: 1.6rem;
+
+            span {
+                width: 84%;
+                line-height: 100%;
+                padding: 0 0.4rem;
+                text-align: center;
+                font-size: 1.4rem; 
+                font-weight: 700;    
+
+            }
+        }
+
+        .content-one-last-text-2 {
+            height: 12rem;
+            @include boxCenter();
+
+            h1 {
+                line-height: 4rem;
+                font-size: 3rem;
+                text-align: center;
+            }
+        }
+
+        .content-one-last-text-3 {
+            height: 8rem;
+            margin-top: 1rem;
+            @include boxCenter();
+
+            span {
+                line-height: 4rem;
+                font-size: 2.4rem;
+                text-align: center;
+                
+            }
+        }
+        .content-one-last-text-4 {
+            height: 6rem;
+            margin-top: 1rem;
+            @include boxCenter();
+
+            span {
+                line-height: 3rem;
+                font-size: 1.8rem;
+                text-align: center;
+                
+            }
+        }
+
+        .content-one-last-btn {
+            height: 8rem;
+            @include boxCenter();
+            .content-one-last-btn-item {
+                width: 28rem;
+                height: 6rem;
+                overflow: hidden;
+            }
+        }
+
+        .content-one-last-fratured {
+            height: 8rem;
+            @include boxCenter();
+            padding: 0.4rem 5rem;
+            
+            .content-one-last-fratured-text {
+                width: 25%;
+                height: 100%;
+                @include boxCenter();
+
+                span {
+                    font-weight: 700;
+                    font-size: 1.4rem;
+                }
+            }
+
+            .content-one-last-fratured-img {
+                width: 75%;
+                height: 100%;
+                @include boxCenter();
+                img {
+                    width: 100%;
+                }
+            }
+        }
+
+    }
+
+
+    @include responsive(min-destop) {
+        
+        .content-one-last {
+            .content-one-last-text-1 {
+                span {
+                    width: 100%;
+                }
+            }
+
+            .content-one-last-text-3 {
+                span {
+                    font-size: 2rem;
+                }
+            }
+
+            .content-one-last-text-4 {
+                height: 7rem;
+
+                span {
+                    line-height: 3rem;
+                }
+            }
+        }
+    }
+
+    @include responsive(tablet) {
+        height: 1100px;
+        @include boxCenter();
+        flex-direction: column;
+
+        .content-one-first {
+            .content-one-first-img {
+                img {
+                    width: 90%;
+                }
+            }
+        }
+
+        .content-one-last {
+            width: 90%; 
+
+            .content-one-last-text-1 {
+                span {
+                    width: 96%;
+                    font-size: 2rem;
+                }
+            }
+
+            .content-one-last-text-2 {
+                h1 {
+                    font-size: 3.6rem;
+                }
+            }
+            .content-one-last-text-3 {
+                span {
+                    font-size: 3rem;
+                }
+            }
+
+            .content-one-last-text-4 {
+                span {
+                    font-size: 1.8rem;
+                }
+            }
+        }
+    }
+
+    @include responsive(tablet-min) {
+        height: 1031px;
+        @include boxCenter();
+        flex-direction: column;
+
+        .content-one-first {
+            width: 90%;
+            height: 40%;
+
+            .content-one-first-img {
+                width: 60%;
+            }
+        }
+
+        .content-one-last {
+            width: 90%;
+            height: 60%;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+
+            .content-one-last-text-1 {
+                height: 6rem;
+                span {
+                    width: 100%;
+                    font-size: 1.8rem;
+                }
+            }
+
+            .content-one-last-text-2 {
+                h1 {
+                    font-size: 4rem;
+                    line-height: 4.6rem;
+                }
+            }
+            .content-one-last-text-3 {
+                span {
+                    font-size: 2.8rem;
+                }
+            }
+
+            .content-one-last-text-4 {
+                span {
+                    font-size: 2.2rem;
+                }
+            }
+        }
+    }
+
+    @include responsive(tablet-mini) {
+        height: 1031px;
+        @include boxCenter();
+        flex-direction: column;
+
+        .content-one-first {
+            width: 90%;
+            height: 40%;
+
+            .content-one-first-img {
+                width: 60%;
+            }
+        }
+
+        .content-one-last {
+            width: 90%;
+            height: 60%;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+
+            .content-one-last-text-1 {
+                height: 6rem;
+                span {
+                    width: 100%;
+                    font-size: 1.4rem;
+                }
+            }
+
+            .content-one-last-text-2 {
+                h1 {
+                    font-size: 4rem;
+                    line-height: 4.6rem;
+                }
+            }
+            .content-one-last-text-3 {
+                span {
+                    font-size: 2.8rem;
+                }
+            }
+
+            .content-one-last-text-4 {
+                span {
+                    font-size: 2.2rem;
+                }
+            }
+        }
+    }
+
+    @include responsive(phone) {
+        height: 800px;
+        @include boxCenter();
+        flex-direction: column;
+
+        .content-one-first {
+            width: 90%;
+            height: 35%;
+
+            .content-one-first-img {
+                width: 80%;
+            }
+        }
+
+        .content-one-last {
+            width: 100%;
+            height: 65%;
+            padding: 4rem 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+
+            .content-one-last-text-1 {
+                height: 4rem;
+                span {
+                    width: 100%;
+                    font-size: 1rem;
+                }
+            }
+
+            .content-one-last-text-2 {
+                h1 {
+                    font-size: 3.2rem;
+                    line-height: 3.6rem;
+                    font-weight:  800;
+                }
+            }
+            .content-one-last-text-3 {
+                span {
+                    font-size: 2.4rem;
+                    line-height: 3rem;
+                }
+            }
+
+            .content-one-last-text-4 {
+                span {
+                    font-size: 2.2rem;
+                    line-height: 3rem;
+                }
+            }
+
+            .content-one-last-fratured {
+                padding: 0.4rem 1rem;
+            }
+        }
+    }
+
+    @include responsive(phones) {
+        height: 800px;
+        @include boxCenter();
+        flex-direction: column;
+
+        .content-one-first {
+            width: 90%;
+            height: 35%;
+
+            .content-one-first-img {
+                width: 64%;
+            }
+        }
+
+        .content-one-last {
+            width: 100%;
+            height: 65%;
+            padding: 4rem 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+
+            .content-one-last-text-1 {
+                height: 4rem;
+                span {
+                    width: 90%;
+                    font-size: 1.3rem;
+                }
+            }
+
+            .content-one-last-text-2 {
+                h1 {
+                    font-size: 3.2rem;
+                    line-height: 3.6rem;
+                    font-weight:  800;
+                }
+            }
+            .content-one-last-text-3 {
+                span {
+                    font-size: 2.4rem;
+                    line-height: 3rem;
+                }
+            }
+
+            .content-one-last-text-4 {
+                span {
+                    font-size: 2.2rem;
+                    line-height: 3rem;
+                }
+            }
+
+            .content-one-last-fratured {
+                padding: 0.4rem 1rem;
+            }
+        }
+    }
+}

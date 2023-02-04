@@ -1,0 +1,21 @@
+.content-feedback-first-slide-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+.content-feedback-first-slide-item .content-feedback--slide-item-img {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+}
+.content-feedback-first-slide-item .content-feedback--slide-item-img img {
+  width: 100%;
+}/*# sourceMappingURL=feedbackstyleitem.css.map */
