@@ -39,7 +39,7 @@ const RegisterForm = () => {
   });
 
   useEffect(() => {
-    if (watch("firstName").match(/^[A-Za-z]+$/i)) {
+    if (watch("firstName")) {
       seterror({ ...errorData, firstName: false });
     } else {
       seterror({ ...errorData, firstName: true });
@@ -47,15 +47,15 @@ const RegisterForm = () => {
   }, [watch("firstName")]);
 
   useEffect(() => {
-    if (watch("lastName").match(/^[A-Za-z]+$/i)) {
+    if (watch("lastName")) {
       seterror({ ...errorData, lastName: false });
     } else {
       seterror({ ...errorData, lastName: true });
     }
   }, [watch("lastName")]);
-
+  const regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
   useEffect(() => {
-    if (watch("email").match(/^\S+@\S+$/i)) {
+    if (regex.test(watch("email"))) {
       seterror({ ...errorData, email: false });
     } else {
       seterror({ ...errorData, email: true });
