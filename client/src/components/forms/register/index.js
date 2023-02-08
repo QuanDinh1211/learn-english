@@ -93,16 +93,18 @@ const RegisterForm = () => {
     if (check) {
       const { firstName, lastName, email, phone } = error;
       if (firstName && lastName && email && phone) {
-        handleCloseModal();
-        setdataform({
-          firstName: "",
-          lastName: "",
-          email: "",
-          phone: "",
-        });
         const result = await handleSubmitFormRoot(dataform);
-        if (result.success) {
-          toast.info("Thông tin khóa học đã được gửi qua Email của bạn.");
+        if (result.status === 200) {
+          toast.success(result.message);
+          handleCloseModal();
+          setdataform({
+            firstName: "",
+            lastName: "",
+            email: "",
+            phone: "",
+          });
+        } else {
+          toast.error(result.message);
         }
       }
     }
