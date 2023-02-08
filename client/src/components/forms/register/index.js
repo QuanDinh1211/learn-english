@@ -1,12 +1,10 @@
-import React, { useEffect, useState, useContext } from "react";
-import { useForm } from "react-hook-form";
+import React, { useState, useContext } from "react";
 import { toast } from "react-toastify";
 
 import "./register.scss";
 import { RootContext } from "../../../store/context/rootContext";
 
 const RegisterForm = () => {
-  const { register, watch, setValue, handleSubmit } = useForm();
   const { setshowModal, handleSubmitFormRoot } = useContext(RootContext);
 
   const handleClickModalContainer = (event) => {
@@ -17,51 +15,92 @@ const RegisterForm = () => {
     setshowModal(false);
   };
 
-  const handleSubmitForm = async (data) => {
-    setshowModal(false);
-    toast.success("Đăng ký thành công!");
+  const [dataform, setdataform] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+  });
 
-    const response = await handleSubmitFormRoot(data);
-
-    if (response.success) {
-      setValue("firstName", "");
-      setValue("lastName", "");
-      setValue("email", "");
-      setValue("phone", "");
-      toast.info("Thông tin khóa học đã được gửi qua Email của bạn.");
-    }
-  };
-
-  const [errorData, seterror] = useState({
+  const [error, seterror] = useState({
     firstName: true,
     lastName: true,
     email: true,
+    phone: true,
   });
 
-  useEffect(() => {
-    if (watch("firstName")) {
-      seterror({ ...errorData, firstName: false });
-    } else {
-      seterror({ ...errorData, firstName: true });
-    }
-  }, [watch("firstName")]);
+  const handleCloseModalOnChangInput = (event) => {
+    setdataform({ ...dataform, [event.target.name]: event.target.value });
 
-  useEffect(() => {
-    if (watch("lastName")) {
-      seterror({ ...errorData, lastName: false });
+    if (!event.target.value) {
+      seterror({ ...error, [event.target.name]: false });
     } else {
-      seterror({ ...errorData, lastName: true });
+      seterror({ ...error, [event.target.name]: true });
     }
-  }, [watch("lastName")]);
-  const regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-  useEffect(() => {
-    if (regex.test(watch("email"))) {
-      seterror({ ...errorData, email: false });
-    } else {
-      seterror({ ...errorData, email: true });
-    }
-  }, [watch("email")]);
 
+    var regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+    if (event.target.name === "email") {
+      if (regex.test(event.target.value)) {
+        seterror({ ...error, [event.target.name]: true });
+      } else {
+        seterror({ ...error, [event.target.name]: false });
+      }
+    }
+  };
+
+  const handleValidateForm = () => {
+    const err = {
+      firstName: true,
+      lastName: true,
+      email: true,
+      phone: true,
+    };
+
+    Object.keys(dataform).forEach((data) => {
+      if (!dataform.firstName) {
+        err.firstName = false;
+      }
+      if (!dataform.lastName) {
+        err.lastName = false;
+      }
+      if (!dataform.email) {
+        err.email = false;
+      }
+      if (!dataform.phone) {
+        err.phone = false;
+      }
+    });
+    seterror(err);
+  };
+
+  const handleSubmitForm = async () => {
+    handleValidateForm();
+    let check = true;
+    if (!dataform.firstName) {
+      check = false;
+    }
+    if (!dataform.lastName) {
+      check = false;
+    }
+    if (!dataform.email) {
+      check = false;
+    }
+    if (!dataform.phone) {
+      check = false;
+    }
+
+    if (check) {
+      const { firstName, lastName, email, phone } = error;
+      if (firstName && lastName && email && phone) {
+        handleCloseModal();
+        const result = await handleSubmitFormRoot(dataform);
+        if (result.success) {
+          toast.info("Thông tin khóa học đã được gửi qua Email của bạn.");
+        }
+      }
+    }
+  };
   return (
     <div
       className="register-form-container"
@@ -87,44 +126,52 @@ const RegisterForm = () => {
           </div>
           <form className="register-body-form">
             <div className="register-form-control">
-              <div className="register-form-input">
+              <div
+                className={
+                  error.firstName ? "form-group" : "form-group invalid"
+                }
+              >
                 <input
-                  {...register("firstName", {
-                    required: true,
-                    pattern: /^[A-Za-z]+$/i,
-                  })}
+                  onChange={handleCloseModalOnChangInput}
+                  id="firstName"
+                  name="firstName"
                   placeholder="Enter first name..."
                 />
               </div>
             </div>
             <div className="register-form-control">
-              <div className="register-form-input">
+              <div
+                className={error.lastName ? "form-group" : "form-group invalid"}
+              >
                 <input
-                  {...register("lastName", {
-                    required: true,
-                    pattern: /^[A-Za-z]+$/i,
-                  })}
+                  onChange={handleCloseModalOnChangInput}
+                  id="lastName"
+                  name="lastName"
                   placeholder="Enter last name..."
                 />
               </div>
             </div>
             <div className="register-form-control">
-              <div className="register-form-input">
+              <div
+                className={error.email ? "form-group" : "form-group invalid"}
+              >
                 <input
+                  onChange={handleCloseModalOnChangInput}
+                  id="email"
                   type="text"
                   placeholder="Email"
-                  {...register("email", {
-                    required: true,
-                    pattern: /^\S+@\S+$/i,
-                  })}
+                  name="email"
                 />
               </div>
             </div>
             <div className="register-form-control">
-              <div className="register-form-input">
+              <div
+                className={error.phone ? "form-group" : "form-group invalid"}
+              >
                 <input
+                  onChange={handleCloseModalOnChangInput}
                   type="number"
-                  {...register("phone")}
+                  name="phone"
                   placeholder="Enter phone"
                 />
               </div>
@@ -134,18 +181,9 @@ const RegisterForm = () => {
       </div>
       <div className="register-form-footer">
         {/* not activated add class 'disabled' in 'register-form-btn' */}
-        {errorData.firstName || errorData.lastName || errorData.email ? (
-          <div className={"register-form-btn disabled"}>
-            <span>ĐĂNG KÝ</span>
-          </div>
-        ) : (
-          <div
-            className={"register-form-btn "}
-            onClick={handleSubmit(handleSubmitForm)}
-          >
-            <span className="font-primary">ĐĂNG KÝ</span>
-          </div>
-        )}
+        <button onClick={handleSubmitForm} className={"register-form-btn "}>
+          <span className="font-primary">ĐĂNG KÝ</span>
+        </button>
       </div>
     </div>
   );

@@ -78,9 +78,10 @@ a {
     @include boxCenter();
 }
 
-.error-message {
-    color: #bf1650;
-    font-size: 1.4rem;
+.form-message {
+    display: none;
+    font-size:14px;
+    color: #ee4d2d;
 }
 
 .title-background {
@@ -100,4 +101,8 @@ a {
 .font-primary {
     font-family: 'Livvic', sans-serif; 
     color: #345D59;
+}
+
+.error {
+    border-color: #ee4d2d;
 }

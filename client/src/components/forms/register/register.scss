@@ -88,7 +88,7 @@
                 .register-form-control {
                     width: 100%;
                     height: 20%;
-                    .register-form-input {
+                    .form-group {
                         width: 100%;
                         height: 100%;
                         background: #f8f8f8;
@@ -96,6 +96,10 @@
                         border: 1px solid rgba(43,144,237,.15);
                         border-radius: 3rem;
                         @include boxCenter();
+
+                        &.invalid {
+                            border-color: #ee4d2d;
+                        }
                         input {
                             width: 90%;
                             height: 90%;
