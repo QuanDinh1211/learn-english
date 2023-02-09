@@ -28,10 +28,6 @@ const RootContextProvider = ({ children }) => {
 
   const handleSubmitFormRoot = async (formdata) => {
     const result = await axios.post(`${url}/user/app02-register`, formdata);
-<<<<<<< HEAD
-=======
-
->>>>>>> 529219018340102bf04d16e99e39f9b97840d0a7
     return result.data;
   };
 
